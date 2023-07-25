@@ -11,7 +11,7 @@ que el scroll hasta la seccion sea suave
 que el display flex sea en columna y que su eje principal sea vertical
 que el eje secundario este centrado
 que el margen tenga un width de 50px
-que la seccion secundaria hnlemos tenga un fondo de color
+que la seccion secundaria hablemos tenga un fondo de color
 */
 
 /* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
@@ -31,10 +31,6 @@ body{
     background-color: #fbfbfb;
     font-family: 'Lato', sans-serif;
     color: #0f0f0f;
-    /* font-family: cursive; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 /* Para que los enlaces hereden el color de texto y no tengan subrayado */
@@ -98,13 +94,20 @@ header{
     padding-top: 100px;
 }
 
+.presentacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 section{
     min-height: 100vh;
     padding: 20px;
 }
 
 h1{
-    font-size: 36px;
+    font-size: 48px;
     margin: 2rem 0;
 }
 
@@ -112,7 +115,6 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
 }
 
 nav ul li {
@@ -138,7 +140,19 @@ p {
     font-size: 20px ;
     width: 200px;
     padding: 1rem;
-    color: white;
+    color: black;
+    margin-top: 1rem;
+
+}
+.descargar-CV:hover{
+    background-color: aqua;
+}
+
+#contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item-list {
@@ -152,7 +166,7 @@ p {
 }
 
 .icono {
-    width: 150px;
+    width: 80px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -160,7 +174,7 @@ p {
 }
 
 .iconos li a {
-    padding: 16px;
+    padding: 0;
     display: inline-block;
 }
 
@@ -175,44 +189,12 @@ footer {
     align-items: center;
 }
 
-/* .box{ */
-    /* display: flex; */
-    /*el eje principal es vertical*/
-    /* flex-direction: column;  */
-    /* eje pricipal*/
-    /* justify-content: centered; */
-    /* eje secundario*/
-    /* width: 400px; */
-    /* height: 400px; */
-/* } */
-
-/* p { 
-    color:#0f0f0f;
-    font-size: 18px;
-    display: flex;
-    align-items: center; 
-    line-height: 1,2;
-    padding: auto;
-} */
-
-/* .centered{
-    text-align: center;
-} */
-
-/* ul{
-    line-height: 1,2;
-    width: 20px;
-    
-} */
-
-/* h1{
-    color: none;
+h1{
     font-size: 36px;
-    text-transform: uppercase;
-} */
+}
 
 h2, h3{
-    font-size: 28px;
+    font-size: 32px;
     text-transform: uppercase;
     text-align: center;
 } 
@@ -225,6 +207,12 @@ h2, h3{
     border: 20px ;
     padding: 3rem;
     margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+a.active{
+    background-color: aqua;
+    transition: background-color 0.3s;  
 }
 
 /* img{
@@ -271,3 +259,15 @@ color: deeppink;
     align-content: center;
     size: 20px;
 }    */
+
+/*para que se vea en version desktop*/
+@media (min-width: 1024px ){
+    .contenedorSeccion1{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .icono {
+        width: 110px;
+    }
+}
